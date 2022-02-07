@@ -3,7 +3,7 @@ PowerShell transcript start
 Start time: 20220205170748
 Username: parrot\user
 RunAs User: parrot\user
-Configuration Name: 
+Configuration Name:
 Machine: parrot (Unix 5.14.0.9)
 Host Application: /opt/microsoft/powershell/7/pwsh.dll
 Process ID: 2941
@@ -298,6 +298,8 @@ Cmdlet          Write-Verbose                                      7.0.0.0    Mi
 Cmdlet          Write-Warning                                      7.0.0.0    Microsoft.PowerSh…
 
 PS /home/user> $PSVersiontable
+
+Get-Help *Where*
 
 Name                           Value
 ----                           -----
