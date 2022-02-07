@@ -1,0 +1,786 @@
+**********************
+PowerShell transcript start
+Start time: 20220205170748
+Username: parrot\user
+RunAs User: parrot\user
+Configuration Name: 
+Machine: parrot (Unix 5.14.0.9)
+Host Application: /opt/microsoft/powershell/7/pwsh.dll
+Process ID: 2941
+PSVersion: 7.1.3
+PSEdition: Core
+GitCommitId: 7.1.3
+OS: Linux 5.14.0-9parrot1-amd64 #1 SMP Debian 5.14.9-9parrot1 (2021-10-26)
+Platform: Unix
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.3
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is /home/user/PowerShell_transcript.parrot.SXugHVpC.20220205170748.txt
+PS /home/user> Get-Command
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Function        cd..
+Function        cd\
+Function        Clear-Host
+Function        Compress-Archive                                   1.2.5      Microsoft.PowerSh…
+Function        Configuration                                      2.0.5      PSDesiredStateCon…
+Function        Expand-Archive                                     1.2.5      Microsoft.PowerSh…
+Function        Find-Command                                       2.2.5      PowerShellGet
+Function        Find-DSCResource                                   2.2.5      PowerShellGet
+Function        Find-Module                                        2.2.5      PowerShellGet
+Function        Find-RoleCapability                                2.2.5      PowerShellGet
+Function        Find-Script                                        2.2.5      PowerShellGet
+Function        Get-CredsFromCredentialProvider                    2.2.5      PowerShellGet
+Function        Get-DscResource                                    2.0.5      PSDesiredStateCon…
+Function        Get-InstalledModule                                2.2.5      PowerShellGet
+Function        Get-InstalledScript                                2.2.5      PowerShellGet
+Function        Get-PSRepository                                   2.2.5      PowerShellGet
+Function        help
+Function        Install-Module                                     2.2.5      PowerShellGet
+Function        Install-Script                                     2.2.5      PowerShellGet
+Function        Invoke-DscResource                                 2.0.5      PSDesiredStateCon…
+Function        New-DscChecksum                                    2.0.5      PSDesiredStateCon…
+Function        New-ScriptFileInfo                                 2.2.5      PowerShellGet
+Function        oss
+Function        Pause
+Function        prompt
+Function        PSConsoleHostReadLine                              2.1.0      PSReadLine
+Function        Publish-Module                                     2.2.5      PowerShellGet
+Function        Publish-Script                                     2.2.5      PowerShellGet
+Function        Register-PSRepository                              2.2.5      PowerShellGet
+Function        Save-Module                                        2.2.5      PowerShellGet
+Function        Save-Script                                        2.2.5      PowerShellGet
+Function        Set-PSRepository                                   2.2.5      PowerShellGet
+Function        TabExpansion2
+Function        Test-ScriptFileInfo                                2.2.5      PowerShellGet
+Function        Uninstall-Module                                   2.2.5      PowerShellGet
+Function        Uninstall-Script                                   2.2.5      PowerShellGet
+Function        Unregister-PSRepository                            2.2.5      PowerShellGet
+Function        Update-Module                                      2.2.5      PowerShellGet
+Function        Update-ModuleManifest                              2.2.5      PowerShellGet
+Function        Update-Script                                      2.2.5      PowerShellGet
+Function        Update-ScriptFileInfo                              2.2.5      PowerShellGet
+Cmdlet          Add-Content                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Add-History                                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Add-Member                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Add-Type                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Clear-Content                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Clear-History                                      7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Clear-Item                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Clear-ItemProperty                                 7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Clear-Variable                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Compare-Object                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Convert-Path                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertFrom-Csv                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertFrom-Json                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertFrom-Markdown                               7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertFrom-SecureString                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertFrom-StringData                             7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertTo-Csv                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertTo-Html                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertTo-Json                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertTo-SecureString                             7.0.0.0    Microsoft.PowerSh…
+Cmdlet          ConvertTo-Xml                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Copy-Item                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Copy-ItemProperty                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Debug-Job                                          7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Debug-Process                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Debug-Runspace                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Disable-ExperimentalFeature                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Disable-PSBreakpoint                               7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Disable-RunspaceDebug                              7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Enable-ExperimentalFeature                         7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Enable-PSBreakpoint                                7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Enable-RunspaceDebug                               7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Enter-PSHostProcess                                7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Enter-PSSession                                    7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Exit-PSHostProcess                                 7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Exit-PSSession                                     7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Export-Alias                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Export-Clixml                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Export-Csv                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Export-FormatData                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Export-ModuleMember                                7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Export-PSSession                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Find-Package                                       1.4.7      PackageManagement
+Cmdlet          Find-PackageProvider                               1.4.7      PackageManagement
+Cmdlet          ForEach-Object                                     7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Format-Custom                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Format-Hex                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Format-List                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Format-Table                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Format-Wide                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Alias                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-ChildItem                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Clipboard                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-CmsMessage                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Command                                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-Content                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Credential                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Culture                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Date                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Error                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Event                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-EventSubscriber                                7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-ExecutionPolicy                                7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-ExperimentalFeature                            7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-FileHash                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-FormatData                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Help                                           7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-History                                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-Host                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Item                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-ItemProperty                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-ItemPropertyValue                              7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Job                                            7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-Location                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-MarkdownOption                                 7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Member                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Module                                         7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-Package                                        1.4.7      PackageManagement
+Cmdlet          Get-PackageProvider                                1.4.7      PackageManagement
+Cmdlet          Get-PackageSource                                  1.4.7      PackageManagement
+Cmdlet          Get-PfxCertificate                                 7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Process                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-PSBreakpoint                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-PSCallStack                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-PSDrive                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-PSHostProcessInfo                              7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-PSProvider                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-PSReadLineKeyHandler                           2.1.0      PSReadLine
+Cmdlet          Get-PSReadLineOption                               2.1.0      PSReadLine
+Cmdlet          Get-PSSession                                      7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Get-Random                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Runspace                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-RunspaceDebug                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-TimeZone                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-TraceSource                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-TypeData                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-UICulture                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Unique                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Uptime                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Variable                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Get-Verb                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Group-Object                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Import-Alias                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Import-Clixml                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Import-Csv                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Import-LocalizedData                               7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Import-Module                                      7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Import-PackageProvider                             1.4.7      PackageManagement
+Cmdlet          Import-PowerShellDataFile                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Import-PSSession                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Install-Package                                    1.4.7      PackageManagement
+Cmdlet          Install-PackageProvider                            1.4.7      PackageManagement
+Cmdlet          Invoke-Command                                     7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Invoke-Expression                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Invoke-History                                     7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Invoke-Item                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Invoke-RestMethod                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Invoke-WebRequest                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Join-Path                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Join-String                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Measure-Command                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Measure-Object                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Move-Item                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Move-ItemProperty                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-Alias                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-Event                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-Guid                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-Item                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-ItemProperty                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-Module                                         7.1.3.0    Microsoft.PowerSh…
+Cmdlet          New-ModuleManifest                                 7.1.3.0    Microsoft.PowerSh…
+Cmdlet          New-Object                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-PSDrive                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-PSRoleCapabilityFile                           7.1.3.0    Microsoft.PowerSh…
+Cmdlet          New-PSSession                                      7.1.3.0    Microsoft.PowerSh…
+Cmdlet          New-PSSessionOption                                7.1.3.0    Microsoft.PowerSh…
+Cmdlet          New-PSTransportOption                              7.1.3.0    Microsoft.PowerSh…
+Cmdlet          New-TemporaryFile                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-TimeSpan                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          New-Variable                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Out-Default                                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Out-File                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Out-Host                                           7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Out-Null                                           7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Out-String                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Pop-Location                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Protect-CmsMessage                                 7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Push-Location                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Read-Host                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Receive-Job                                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Register-ArgumentCompleter                         7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Register-EngineEvent                               7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Register-ObjectEvent                               7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Register-PackageSource                             1.4.7      PackageManagement
+Cmdlet          Remove-Alias                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Remove-Event                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Remove-Item                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Remove-ItemProperty                                7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Remove-Job                                         7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Remove-Module                                      7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Remove-PSBreakpoint                                7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Remove-PSDrive                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Remove-PSReadLineKeyHandler                        2.1.0      PSReadLine
+Cmdlet          Remove-PSSession                                   7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Remove-TypeData                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Remove-Variable                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Rename-Item                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Rename-ItemProperty                                7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Resolve-Path                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Restart-Computer                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Save-Help                                          7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Save-Package                                       1.4.7      PackageManagement
+Cmdlet          Select-Object                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Select-String                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Select-Xml                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Send-MailMessage                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-Alias                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-Clipboard                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-Content                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-Date                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-ExecutionPolicy                                7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-Item                                           7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-ItemProperty                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-Location                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-MarkdownOption                                 7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-PackageSource                                  1.4.7      PackageManagement
+Cmdlet          Set-PSBreakpoint                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-PSDebug                                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Set-PSReadLineKeyHandler                           2.1.0      PSReadLine
+Cmdlet          Set-PSReadLineOption                               2.1.0      PSReadLine
+Cmdlet          Set-StrictMode                                     7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Set-TraceSource                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Set-Variable                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Show-Markdown                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Sort-Object                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Split-Path                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Start-Job                                          7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Start-Process                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Start-Sleep                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Start-ThreadJob                                    2.0.3      ThreadJob
+Cmdlet          Start-Transcript                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Stop-Computer                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Stop-Job                                           7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Stop-Process                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Stop-Transcript                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Tee-Object                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Test-Connection                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Test-Json                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Test-ModuleManifest                                7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Test-Path                                          7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Trace-Command                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Unblock-File                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Uninstall-Package                                  1.4.7      PackageManagement
+Cmdlet          Unprotect-CmsMessage                               7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Unregister-Event                                   7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Unregister-PackageSource                           1.4.7      PackageManagement
+Cmdlet          Update-FormatData                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Update-Help                                        7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Update-List                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Update-TypeData                                    7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Wait-Debugger                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Wait-Event                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Wait-Job                                           7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Wait-Process                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Where-Object                                       7.1.3.0    Microsoft.PowerSh…
+Cmdlet          Write-Debug                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Write-Error                                        7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Write-Host                                         7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Write-Information                                  7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Write-Output                                       7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Write-Progress                                     7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Write-Verbose                                      7.0.0.0    Microsoft.PowerSh…
+Cmdlet          Write-Warning                                      7.0.0.0    Microsoft.PowerSh…
+
+PS /home/user> $PSVersiontable
+
+Name                           Value
+----                           -----
+PSVersion                      7.1.3
+PSEdition                      Core
+GitCommitId                    7.1.3
+OS                             Linux 5.14.0-9parrot1-amd64 #1 SMP Debian 5.14.9-9parrot1 (2021-…
+Platform                       Unix
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+WSManStackVersion              3.0
+
+PS /home/user> $PSVersiontable.OS
+Linux 5.14.0-9parrot1-amd64 #1 SMP Debian 5.14.9-9parrot1 (2021-10-26)
+PS /home/user> Get-Help copy
+
+NAME
+    Copy-Item
+
+SYNTAX
+    Copy-Item [-Path] <string[]> [[-Destination] <string>] [-Container] [-Force] [-Filter
+    <string>] [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-PassThru] [-Credential
+    <pscredential>] [-WhatIf] [-Confirm] [-FromSession <PSSession>] [-ToSession <PSSession>]
+    [<CommonParameters>]
+
+    Copy-Item [[-Destination] <string>] -LiteralPath <string[]> [-Container] [-Force] [-Filter
+    <string>] [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-PassThru] [-Credential
+    <pscredential>] [-WhatIf] [-Confirm] [-FromSession <PSSession>] [-ToSession <PSSession>]
+    [<CommonParameters>]
+
+
+ALIASES
+    cpi
+    copy
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only
+    partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use
+    Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Copy-Item -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2096990.
+
+
+PS /home/user> Get-Help Copy-Item
+
+NAME
+    Copy-Item
+
+SYNTAX
+    Copy-Item [-Path] <string[]> [[-Destination] <string>] [-Container] [-Force] [-Filter
+    <string>] [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-PassThru] [-Credential
+    <pscredential>] [-WhatIf] [-Confirm] [-FromSession <PSSession>] [-ToSession <PSSession>]
+    [<CommonParameters>]
+
+    Copy-Item [[-Destination] <string>] -LiteralPath <string[]> [-Container] [-Force] [-Filter
+    <string>] [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-PassThru] [-Credential
+    <pscredential>] [-WhatIf] [-Confirm] [-FromSession <PSSession>] [-ToSession <PSSession>]
+    [<CommonParameters>]
+
+
+ALIASES
+    cpi
+    copy
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only
+    partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use
+    Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Copy-Item -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2096990.
+
+
+PS /home/user> Update-Help
+PS /home/user> Get-Help Copy-Item
+
+NAME
+    Copy-Item
+
+SYNTAX
+    Copy-Item [-Path] <string[]> [[-Destination] <string>] [-Container] [-Force] [-Filter
+    <string>] [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-PassThru] [-Credential
+    <pscredential>] [-WhatIf] [-Confirm] [-FromSession <PSSession>] [-ToSession <PSSession>]
+    [<CommonParameters>]
+
+    Copy-Item [[-Destination] <string>] -LiteralPath <string[]> [-Container] [-Force] [-Filter
+    <string>] [-Include <string[]>] [-Exclude <string[]>] [-Recurse] [-PassThru] [-Credential
+    <pscredential>] [-WhatIf] [-Confirm] [-FromSession <PSSession>] [-ToSession <PSSession>]
+    [<CommonParameters>]
+
+
+ALIASES
+    cpi
+    copy
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only
+    partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use
+    Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Copy-Item -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2096990.
+
+
+PS /home/user> Get-Help Copy-Item -Examples
+
+NAME
+    Copy-Item
+
+ALIASES
+    cpi
+    copy
+
+
+REMARKS
+    Get-Help cannot find the Help files for this cmdlet on this computer. It is displaying only
+    partial help.
+        -- To download and install Help files for the module that includes this cmdlet, use
+    Update-Help.
+        -- To view the Help topic for this cmdlet online, type: "Get-Help Copy-Item -Online" or
+           go to https://go.microsoft.com/fwlink/?LinkID=2096990.
+
+
+PS /home/user> Get-Help Copy-Item -filter
+>> TerminatingError(Get-Help): "A parameter cannot be found that matches parameter name 'filter'."
+
+Get-Help: A parameter cannot be found that matches parameter name 'filter'.
+
+[91mGet-Help: [91mA parameter cannot be found that matches parameter name 'filter'.[0m
+PS /home/user> Get-Help Copy-Filter
+
+Get-Help: Get-Help could not find Copy-Filter in a help file in this session. To download updated help topics type: "Update-Help". To get help online, search for the help topic in the TechNet library at https://go.microsoft.com/fwlink/?LinkID=107116.
+
+[91mGet-Help: [91mGet-Help could not find Copy-Filter in a help file in this session. To download updated help topics type: "Update-Help". To get help online, search for the help topic in the TechNet library at https://go.microsoft.com/fwlink/?LinkID=107116.[0m
+PS /home/user> Get-Alias
+
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           ? -> Where-Object
+Alias           % -> ForEach-Object
+Alias           cd -> Set-Location
+Alias           chdir -> Set-Location
+Alias           clc -> Clear-Content
+Alias           clhy -> Clear-History
+Alias           cli -> Clear-Item
+Alias           clp -> Clear-ItemProperty
+Alias           cls -> Clear-Host
+Alias           clv -> Clear-Variable
+Alias           copy -> Copy-Item
+Alias           cpi -> Copy-Item
+Alias           cvpa -> Convert-Path
+Alias           dbp -> Disable-PSBreakpoint
+Alias           del -> Remove-Item
+Alias           dir -> Get-ChildItem
+Alias           ebp -> Enable-PSBreakpoint
+Alias           echo -> Write-Output
+Alias           epal -> Export-Alias
+Alias           epcsv -> Export-Csv
+Alias           erase -> Remove-Item
+Alias           etsn -> Enter-PSSession
+Alias           exsn -> Exit-PSSession
+Alias           fc -> Format-Custom
+Alias           fhx -> Format-Hex                                  7.0.0.0    Microsoft.PowerSh…
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard                               7.0.0.0    Microsoft.PowerSh…
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           gerr -> Get-Error
+Alias           ghy -> Get-History
+Alias           gi -> Get-Item
+Alias           gjb -> Get-Job
+Alias           gl -> Get-Location
+Alias           gm -> Get-Member
+Alias           gmo -> Get-Module
+Alias           gp -> Get-ItemProperty
+Alias           gps -> Get-Process
+Alias           gpv -> Get-ItemPropertyValue
+Alias           group -> Group-Object
+Alias           gsn -> Get-PSSession
+Alias           gtz -> Get-TimeZone                                7.0.0.0    Microsoft.PowerSh…
+Alias           gu -> Get-Unique
+Alias           gv -> Get-Variable
+Alias           h -> Get-History
+Alias           history -> Get-History
+Alias           icm -> Invoke-Command
+Alias           iex -> Invoke-Expression
+Alias           ihy -> Invoke-History
+Alias           ii -> Invoke-Item
+Alias           ipal -> Import-Alias
+Alias           ipcsv -> Import-Csv
+Alias           ipmo -> Import-Module
+Alias           irm -> Invoke-RestMethod
+Alias           iwr -> Invoke-WebRequest
+Alias           md -> mkdir
+Alias           measure -> Measure-Object
+Alias           mi -> Move-Item
+Alias           move -> Move-Item
+Alias           mp -> Move-ItemProperty
+Alias           nal -> New-Alias
+Alias           ndr -> New-PSDrive
+Alias           ni -> New-Item
+Alias           nmo -> New-Module
+Alias           nsn -> New-PSSession
+Alias           nv -> New-Variable
+Alias           oh -> Out-Host
+Alias           popd -> Pop-Location
+Alias           pushd -> Push-Location
+Alias           pwd -> Get-Location
+Alias           r -> Invoke-History
+Alias           rbp -> Remove-PSBreakpoint
+Alias           rcjb -> Receive-Job
+Alias           rcsn -> Receive-PSSession
+Alias           rd -> Remove-Item
+Alias           rdr -> Remove-PSDrive
+Alias           ren -> Rename-Item
+Alias           ri -> Remove-Item
+Alias           rjb -> Remove-Job
+Alias           rmo -> Remove-Module
+Alias           rni -> Rename-Item
+Alias           rnp -> Rename-ItemProperty
+Alias           rp -> Remove-ItemProperty
+Alias           rsn -> Remove-PSSession
+Alias           rv -> Remove-Variable
+Alias           rvpa -> Resolve-Path
+Alias           sajb -> Start-Job
+Alias           sal -> Set-Alias
+Alias           saps -> Start-Process
+Alias           sbp -> Set-PSBreakpoint
+Alias           scb -> Set-Clipboard                               7.0.0.0    Microsoft.PowerSh…
+Alias           select -> Select-Object
+Alias           set -> Set-Variable
+Alias           si -> Set-Item
+Alias           sl -> Set-Location
+Alias           sls -> Select-String
+Alias           sp -> Set-ItemProperty
+Alias           spjb -> Stop-Job
+Alias           spps -> Stop-Process
+Alias           sv -> Set-Variable
+Alias           type -> Get-Content
+Alias           where -> Where-Object
+Alias           wjb -> Wait-Job
+
+PS /home/user> Get-Help mkdir
+
+Get-Help: Get-Help could not find mkdir in a help file in this session. To download updated help topics type: "Update-Help". To get help online, search for the help topic in the TechNet library at https://go.microsoft.com/fwlink/?LinkID=107116.
+
+[91mGet-Help: [91mGet-Help could not find mkdir in a help file in this session. To download updated help topics type: "Update-Help". To get help online, search for the help topic in the TechNet library at https://go.microsoft.com/fwlink/?LinkID=107116.[0m
+PS /home/user> Get-ChildItem
+
+    Directory: /home/user
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          04/02/2022    09:24                Desktop
+d----          10/11/2021    14:17                Documents
+d----          10/11/2021    14:17                Downloads
+d----          10/11/2021    14:17                Music
+d----          10/11/2021    14:17                Pictures
+d----          10/11/2021    14:17                Public
+d----          05/02/2022    14:30                shared
+d----          09/11/2021    14:28                Templates
+d----          05/02/2022    14:42                trash
+d----          10/11/2021    14:17                Videos
+-----          05/02/2022    18:12          37432 PowerShell_transcript.parrot.SXugHVpC.20220205
+                                                  170748.txt
+
+PS /home/user> Get-Process
+
+ NPM(K)    PM(M)      WS(M)     CPU(s)      Id  SI ProcessName
+ ------    -----      -----     ------      --  -- -----------
+      0     0.00       2.89       0.00     980 979 (sd-pam)
+      0     0.00       7.27       0.35     506 506 accounts-daemon
+      0     0.00       0.00       0.00      61   0 acpi_thermal_pm
+      0     0.00       8.14       0.01    1218 …03 agent
+      0     0.00       1.72       0.00     723 723 agetty
+      0     0.00      42.86       2.32    1185 …03 applet.py
+      0     0.00       9.21       0.03    1100 …00 at-spi-bus-launcher
+      0     0.00       7.70       0.42    1135 …00 at-spi2-registryd
+      0     0.00       0.00       0.00     132   0 ata_sff
+      0     0.00       4.71       0.08    1370 …70 bash
+      0     0.00       4.79       0.07    2935 …35 bash
+      0     0.00       0.00       0.00      54   0 blkcg_punt_bio
+      0     0.00      47.91       1.68    1202 …03 blueman-applet
+      0     0.00      52.70       4.13    1287 …02 brisk-menu
+      0     0.00       0.00       0.00     280   0 btrfs-cache
+      0     0.00       0.00       0.01     292   0 btrfs-cleaner
+      0     0.00       0.00       0.00     278   0 btrfs-delalloc
+      0     0.00       0.00       0.00     289   0 btrfs-delayed-m
+      0     0.00       0.00       0.00     282   0 btrfs-endio
+      0     0.00       0.00       0.00     283   0 btrfs-endio-met
+      0     0.00       0.00       0.00     284   0 btrfs-endio-met
+      0     0.00       0.00       0.00     285   0 btrfs-endio-rai
+      0     0.00       0.00       0.00     287   0 btrfs-endio-wri
+      0     0.00       0.00       0.00     281   0 btrfs-fixup
+      0     0.00       0.00       0.00     279   0 btrfs-flush_del
+      0     0.00       0.00       0.00     288   0 btrfs-freespace
+      0     0.00       0.00       0.00     291   0 btrfs-qgroup-re
+      0     0.00       0.00       0.00     290   0 btrfs-readahead
+      0     0.00       0.00       0.00     286   0 btrfs-rmw
+      0     0.00       0.00       4.14     293   0 btrfs-transacti
+      0     0.00       0.00       0.00     276   0 btrfs-worker
+      0     0.00       0.00       0.00     277   0 btrfs-worker-hi
+      0     0.00      64.84       4.01    1168 …03 caja
+      0     0.00       0.00       0.00     157   0 card0-crtc0
+      0     0.00       0.00       0.00     158   0 card0-crtc1
+      0     0.00       0.00       0.00     159   0 card0-crtc2
+      0     0.00       0.00       0.00     160   0 card0-crtc3
+      0     0.00       0.00       0.00     161   0 card0-crtc4
+      0     0.00       0.00       0.00     162   0 card0-crtc5
+      0     0.00       0.00       0.00     163   0 card0-crtc6
+      0     0.00       0.00       0.00     164   0 card0-crtc7
+      0     0.00       0.00       0.00     725   0 cfg80211
+      0     0.00      37.13       1.20    1297 …02 clock-applet
+      0     0.00       0.00       0.00      15   0 cpuhp/0
+      0     0.00       0.00       0.00      16   0 cpuhp/1
+      0     0.00       2.81       0.04     510 510 cron
+      0     0.00       0.00       0.00     127   0 cryptd
+      0     0.00       5.43       3.43     511 511 dbus-daemon
+      0     0.00       4.99       0.61    1002 …02 dbus-daemon
+      0     0.00       4.34       0.18    1105 …00 dbus-daemon
+      0     0.00       5.65       0.04    1042 …02 dconf-service
+      0     0.00       0.00       0.00      57   0 devfreq_wq
+      0     0.00       0.00       0.00      56   0 edac-poller
+      0     0.00     377.89   1,974.26    2561 …03 firefox-esr
+      0     0.00       1.78       0.00    1252 …52 fusermount
+      0     0.00      56.17       5.19    1364 …03 geany
+      0     0.00       6.93       0.06    1129 …03 gnome-keyring-daemon
+      0     0.00       9.39       0.49    1212 …12 gvfs-afc-volume-monitor
+      0     0.00       5.72       0.02    1200 …00 gvfs-goa-volume-monitor
+      0     0.00       6.50       0.02    1184 …84 gvfs-gphoto2-volume-monitor
+      0     0.00       5.94       0.02    1180 …80 gvfs-mtp-volume-monitor
+      0     0.00      11.71       0.10    1169 …69 gvfs-udisks2-volume-monitor
+      0     0.00       7.37       0.07    1142 …42 gvfsd
+      0     0.00       6.13       0.03    1350 …50 gvfsd-metadata
+      0     0.00       9.58       0.03    1322 …42 gvfsd-trash
+      0     0.00       4.97       1.24     505 505 haveged
+      0     0.00       0.00       0.00      25   0 inet_frag_wq
+      0     0.00       0.00       0.00      63   0 ipv6_addrconf
+      0     0.00       0.00       3.55     156   0 irq/18-vmwgfx
+      0     0.00       0.00       0.00      26   0 kauditd
+      0     0.00       0.00       0.00      53   0 kblockd
+      0     0.00       0.00       0.55      30   0 kcompactd0
+      0     0.00       0.00       0.00      23   0 kdevtmpfs
+      0     0.00       0.00       0.81      32   0 khugepaged
+      0     0.00       0.00       0.00      27   0 khungtaskd
+      0     0.00       0.00       0.00      52   0 kintegrityd
+      0     0.00       0.00       0.00      31   0 ksmd
+      0     0.00       0.00       0.48      12   0 ksoftirqd/0
+      0     0.00       0.00       0.64      18   0 ksoftirqd/1
+      0     0.00       0.00       0.00      74   0 kstrp
+      0     0.00       0.00       0.08      59   0 kswapd0
+      0     0.00       0.00       0.00       2   0 kthreadd
+      0     0.00       0.00       0.00      60   0 kthrotld
+      0     0.00       0.00       0.00    5991   0 kworker/0:0-ata_sff
+      0     0.00       0.00       0.00       6   0 kworker/0:0H-events_highpri
+      0     0.00       0.00       0.00    5900   0 kworker/0:1-ata_sff
+      0     0.00       0.00       1.04      58   0 kworker/0:1H-kblockd
+      0     0.00       0.00       0.70    5351   0 kworker/0:2-mm_percpu_wq
+      0     0.00       0.00       3.61    4748   0 kworker/1:0-events
+      0     0.00       0.00       0.00      20   0 kworker/1:0H-events_highpri
+      0     0.00       0.00       0.86      64   0 kworker/1:1H-kblockd
+      0     0.00       0.00       0.00    5706   0 kworker/1:2-events
+      0     0.00       0.00       0.03    5643   0 kworker/u4:0-events_unbound
+      0     0.00       0.00       0.23    4981   0 kworker/u4:1-btrfs-endio-write
+      0     0.00       0.00       0.01    5911   0 kworker/u4:2-flush-btrfs-1
+      0     0.00       0.00       0.00      78   0 kworker/u5:0
+      0     0.00       6.94       0.10     706 706 lightdm
+      0     0.00       8.01       0.03     974 706 lightdm
+      0     0.00      44.56      45.80    1141 …03 marco
+      0     0.00      36.29       0.71    1289 …02 mate-inhibit-applet
+      0     0.00      31.42      13.29    1296 …02 mate-multiload-applet
+      0     0.00      49.52       3.76    1152 …03 mate-panel
+      0     0.00      37.39       1.35    1192 …03 mate-power-manager
+      0     0.00      26.09       1.02    1209 …03 mate-screensaver
+      0     0.00      37.27       2.67    1133 …03 mate-settings-daemon
+      0     0.00      46.00      29.65    2927 …03 mate-terminal
+      0     0.00      40.27       0.74    1199 …03 mate-volume-control-status-icon
+      0     0.00       0.00       0.00     226   0 md
+      0     0.00       0.00       0.04      14   0 migration/0
+      0     0.00       0.00       0.35      17   0 migration/1
+      0     0.00       0.00       0.00      62   0 mld
+      0     0.00       0.00       0.00       9   0 mm_percpu_wq
+      0     0.00      12.61       0.23     571 571 ModemManager
+      0     0.00       0.00       0.00      24   0 netns
+      0     0.00      16.39       0.62     514 514 NetworkManager
+      0     0.00      43.90       0.82    1211 …03 nm-applet
+      0     0.00      31.12       0.64    1295 …02 notification-area-applet
+      0     0.00       6.56       0.02    1347 …47 obexd
+      0     0.00       0.00       0.00      28   0 oom_reaper
+      0     0.00      41.65      22.49     702 702 opensnitchd
+      0     0.00      19.36       0.15    1615 …15 packagekitd
+      0     0.00       5.64       0.02     999 999 pipewire
+      0     0.00       6.26       0.02    1004 999 pipewire-media-session
+      0     0.00      14.83       0.17    1201 …03 polkit-mate-authentication-agent-1
+      0     0.00       8.96       0.66     519 519 polkitd
+      0     0.00     122.90       7.73    2720 …03 Privileged Cont
+      0     0.00      28.14      41.27    1000 …00 pulseaudio
+      0     0.00     167.27      36.93    2941 …35 pwsh
+      0     0.00       0.00       0.00     235   0 raid5wq
+      0     0.00       0.00       0.00       3   0 rcu_gp
+      0     0.00       0.00       0.00       4   0 rcu_par_gp
+      0     0.00       0.00       3.31      13   0 rcu_sched
+      0     0.00       0.00       0.00      10   0 rcu_tasks_rude_
+      0     0.00       0.00       0.00      11   0 rcu_tasks_trace
+      0     0.00      51.84     291.27    4231 …03 RDD Process
+      0     0.00       0.80       0.01     520 520 rngd
+      0     0.00       2.98       0.19     917 917 rtkit-daemon
+      0     0.00       0.00       0.00     140   0 scsi_eh_0
+      0     0.00       0.00       0.01     141   0 scsi_eh_1
+      0     0.00       0.00       0.00     144   0 scsi_eh_2
+      0     0.00       0.00       0.00     142   0 scsi_tmf_0
+      0     0.00       0.00       0.00     143   0 scsi_tmf_1
+      0     0.00       0.00       0.00     148   0 scsi_tmf_2
+      0     0.00       0.45       0.05    1096 …96 ssh-agent
+      0     0.00      10.29       2.64       1   1 systemd
+      0     0.00       8.88       0.28     979 979 systemd
+      0     0.00      24.06       0.89     356 356 systemd-journald
+      0     0.00       7.20       0.33     523 523 systemd-logind
+      0     0.00       6.56       0.32     374 374 systemd-udevd
+      0     0.00       0.00       0.00      55   0 tpm_dev_wq
+      0     0.00       0.00       0.00     155   0 ttm_swap
+      0     0.00      13.99       0.15     524 524 udisksd
+      0     0.00       8.45       0.53     959 959 upowerd
+      0     0.00       0.45       0.00    1067 …66 VBoxClient
+      0     0.00       4.28       0.06    1069 …66 VBoxClient
+      0     0.00       0.45       0.00    1079 …78 VBoxClient
+      0     0.00       2.93       0.01    1081 …78 VBoxClient
+      0     0.00       0.45       0.00    1085 …84 VBoxClient
+      0     0.00       2.88      19.33    1089 …84 VBoxClient
+      0     0.00       0.45       0.00    1091 …90 VBoxClient
+      0     0.00       3.68       0.04    1092 …90 VBoxClient
+      0     0.00       3.21       2.37     664 655 VBoxService
+      0     0.00     150.67      46.90    2630 …03 Web Content
+      0     0.00     367.57   1,477.46    2776 …03 Web Content
+      0     0.00      69.74       0.40    4195 …03 Web Content
+      0     0.00     199.80      29.60    2661 …03 WebExtensions
+      0     0.00      52.64       3.92    1288 …02 wnck-applet
+      0     0.00       5.57       0.08     526 526 wpa_supplicant
+      0     0.00       0.00       0.00      29   0 writeback
+      0     0.00      27.07       0.79    1003 …03 x-session-manager
+      0     0.00      14.92       0.41    1229 …29 xdg-desktop-portal
+      0     0.00      23.03       0.28    1256 …56 xdg-desktop-portal-gtk
+      0     0.00      10.26       0.07    1238 …38 xdg-document-portal
+      0     0.00       4.33       0.00    1246 …46 xdg-permission-store
+      0     0.00       0.00       0.00     222   0 xfsalloc
+      0     0.00       0.00       0.00     223   0 xfs_mru_cache
+      0     0.00     120.15     560.48     721 721 Xorg
+      0     0.00       0.00       0.00      77   0 zswap-shrink
+
+PS /home/user> Get-ChildItem
+
+    Directory: /home/user
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          04/02/2022    09:24                Desktop
+d----          10/11/2021    14:17                Documents
+d----          10/11/2021    14:17                Downloads
+d----          10/11/2021    14:17                Music
+d----          10/11/2021    14:17                Pictures
+d----          10/11/2021    14:17                Public
+d----          05/02/2022    14:30                shared
+d----          09/11/2021    14:28                Templates
+d----          05/02/2022    14:42                trash
+d----          10/11/2021    14:17                Videos
+-----          05/02/2022    18:26          50073 PowerShell_transcript.parrot.SXugHVpC.20220205
+                                                  170748.txt
+
+PS /home/user> exit
+**********************
+PowerShell transcript end
+End time: 20220205183129
+**********************
